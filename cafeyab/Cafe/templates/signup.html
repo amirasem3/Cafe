@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'home.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+</head>
+<body>
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+{#      <img src="http://127.0.0.1:8000/comments">#}
+      <script src="http://www.google.com/recaptcha/api.js"></script>
+    <div class="g-recaptcha" data-sitekey="6LdRSRYUAAAAAFCqQ1aZnYfRGJIlAUMX3qkUWlcF"></div>
+    <button type="submit">Sign up</button>
+  </form>
+{% endblock %}
+</body>
+</html>
